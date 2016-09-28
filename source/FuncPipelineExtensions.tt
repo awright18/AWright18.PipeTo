@@ -1,0 +1,96 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".cs" #>
+
+using System;
+
+namespace AWright18.Extensions
+{
+
+	public static class FuncThenExtensions
+	{
+	
+		public static T Then<T> (Func<T> func)
+		{
+			return func();
+		}
+
+	<# 
+
+		for(int i=2; i < 16; i++)
+		{
+			var tReturnValue = string.Format("T{0}",i);
+		
+			var tNumbers = Enumerable.Range(1,i);
+		
+			var typeListBuilder = new StringBuilder();
+		
+			var isFirstT = true; 
+
+			var types = string.Empty;
+
+			var parameters = string.Empty;
+
+			var parameterNames = string.Empty;
+
+			foreach(var number in tNumbers)
+			{
+				if(number == 1)
+				{
+					typeListBuilder.Append("T1");
+				}
+				else
+				{
+					typeListBuilder.AppendFormat(",T{0}",number);
+				}
+			}
+
+			types = typeListBuilder.ToString();
+		
+			typeListBuilder = new StringBuilder();
+
+			foreach(var number in tNumbers)
+			{
+				if(number == 1 || number == tNumbers.Count())
+				{
+				
+					continue;
+				}
+				else
+				{
+					typeListBuilder.AppendFormat(",T{0} val{0}",number);
+				}
+			}
+
+			parameters = typeListBuilder.ToString();
+
+		
+			typeListBuilder = new StringBuilder();
+
+			foreach(var number in tNumbers)
+			{
+				if(number == 1 || number == tNumbers.Count())
+				{
+					continue;
+				}
+				else
+				{
+					typeListBuilder.AppendFormat(", val{0}",number);
+				}
+			}
+
+			parameterNames = typeListBuilder.ToString();
+	#>
+	public static <#=tReturnValue#> Then<<#=types#>> (this T1 val1, Func<<#=types#>> func <#= parameters #> )
+		{
+			return func(val1 <#= parameterNames #>);
+		}
+
+	<#
+		}
+	#>
+} 
+}
