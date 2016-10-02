@@ -21,7 +21,7 @@ namespace AWright18.PipeTo.CodeGenerator.Func
                 _namespaceName,
                 $"{_methodName}FuncExtensions",
                 _methodName,
-                16,
+                18,
                 new TypeArgumentGenerator(),
                 new FuncValueStringGenerator(defaultValuePrefix),
                 new FuncParametersGenerator(defaultValuePrefix),

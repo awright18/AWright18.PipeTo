@@ -17,6 +17,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{2B893FFB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWright18.PIpeTo.CodeGenerator", "source\AWright18.PIpeTo.CodeGenerator\AWright18.PIpeTo.CodeGenerator.csproj", "{5B8B3020-D7D4-454B-8617-9271F564B871}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{FA3ECBF6-C63F-4F5C-9621-50EF2EEEEE2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWright18.PipeTo.Tests", "Tests\AWright18.PipeTo.Tests\AWright18.PipeTo.Tests.csproj", "{91C81F57-45A7-457C-93B9-57297209EA1E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,8 +35,15 @@ Global
 		{5B8B3020-D7D4-454B-8617-9271F564B871}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B8B3020-D7D4-454B-8617-9271F564B871}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B8B3020-D7D4-454B-8617-9271F564B871}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91C81F57-45A7-457C-93B9-57297209EA1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91C81F57-45A7-457C-93B9-57297209EA1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91C81F57-45A7-457C-93B9-57297209EA1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91C81F57-45A7-457C-93B9-57297209EA1E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{91C81F57-45A7-457C-93B9-57297209EA1E} = {FA3ECBF6-C63F-4F5C-9621-50EF2EEEEE2C}
 	EndGlobalSection
 EndGlobal

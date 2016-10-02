@@ -3,18 +3,29 @@ open Fake
 open Fake.AssemblyInfoFile
 open Fake.Git
 open Fake.GitVersionHelper
+open Fake.Testing.XUnit2
 open System;
 
-
-//Generator variables
+//Generator Project variables
 let generatorProjectName = "AWright18.PipeTo.CodeGenerator"
 let generatorProjectCsProj = sprintf "./source/%s/%s.csproj" generatorProjectName generatorProjectName
 let generatorBuildDir = sprintf "artifacts/%s" generatorProjectName
 let generatorExe =  sprintf "artifacts/%s/%s.exe" generatorProjectName generatorProjectName
 let generatorExeArgs = "source\AWright18.PipeTo\AWright18.PipeTo.csproj"
 
+//Test Project Variables
+let testProjectName = "AWright18.PipeTo.Tests"
+let testProjectCsProj = sprintf "./tests/%s/%s.csproj" testProjectName testProjectName
+let testProjectDll = sprintf "artifacts/%s/%s.dll" testProjectName testProjectName
+let testBuildDir = sprintf "artifacts/%s" testProjectName
+let xUnitExeName = "xunit.console"
+let xUnitExe =  sprintf "build/%s/%s.exe" "xunit.runner.console/tools" xUnitExeName
+let xUnitExeArgs = testProjectDll
+let xUnitHtmlOutput = sprintf "artifacts/%s/%s.html" testProjectName testProjectName
+
 //Pipe To Variables 
 let projectName = "AWright18.PipeTo";
+let propertiesFile = sprintf "./source/%s/Properties/AssemblyInfo.cs" projectName
 let authors = ["Adam Wright"]
 let projectDecription = "Allows Piping of function results to other functions";
 let projectSummary = "Pipe function results to other functions"
@@ -73,7 +84,8 @@ Target "SetVersions" (fun _->
 
 Target "BuildApp" (fun _ -> 
 
-    CreateCSharpAssemblyInfo "./source/Properties/AssemblyInfo.cs"
+    trace "updateing"
+    CreateCSharpAssemblyInfo propertiesFile
         [Attribute.Title projectName
          Attribute.Description projectDecription
          Attribute.Guid projectGuid
@@ -87,6 +99,21 @@ Target "BuildApp" (fun _ ->
     !! projectFileName
     |> MSBuildRelease buildDir "build" 
     |> Log "ReleaseBuild-Output: " 
+)
+
+Target "RunTests" (fun _-> 
+    trace "Running Tests"
+
+    !! testProjectCsProj
+    |> MSBuildRelease testBuildDir "build" 
+    |> Log "ReleaseBuild-Output: " 
+
+    !! testProjectDll
+    |> xUnit2 (fun p -> { p with 
+                           ToolPath = xUnitExe
+                           WorkingDir = Some "."
+                           HtmlOutputPath = Some xUnitHtmlOutput
+        })
 )
 
 Target "CreatePackage" (fun _ ->
@@ -113,7 +140,8 @@ Target "CreatePackage" (fun _ ->
     ==> "RunGenerator"
     ==> "SetVersions"
     ==> "BuildApp"
+    ==> "RunTests"
     ==> "CreatePackage"
     
 
-RunTargetOrDefault "BuildApp"
+RunTargetOrDefault "RunTests"
