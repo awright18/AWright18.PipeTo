@@ -9,11 +9,11 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCopyrightAttribute("2016")]
 [assembly: AssemblyVersionAttribute("0.1.0.0")]
 [assembly: AssemblyFileVersionAttribute("0.1.0.0")]
-[assembly: AssemblyInformationalVersionAttribute("0.1.0-Tests.1+1.Branch.feature/Tests.Sha.6fa61b42ce943c59aff0ff44dc50e96494790c48")]
-[assembly: AssemblyMetadataAttribute("githash","6fa61b42ce943c59aff0ff44dc50e96494790c48")]
+[assembly: AssemblyInformationalVersionAttribute("0.1.0-unstable.2+Branch.develop.Sha.f245570a7b3f680f95a0661d029f82313e7286e5")]
+[assembly: AssemblyMetadataAttribute("githash","f245570a7b3f680f95a0661d029f82313e7286e5")]
 namespace System {
     internal static class AssemblyVersionInformation {
         internal const string Version = "0.1.0.0";
-        internal const string InformationalVersion = "0.1.0-Tests.1+1.Branch.feature/Tests.Sha.6fa61b42ce943c59aff0ff44dc50e96494790c48";
+        internal const string InformationalVersion = "0.1.0-unstable.2+Branch.develop.Sha.f245570a7b3f680f95a0661d029f82313e7286e5";
     }
 }

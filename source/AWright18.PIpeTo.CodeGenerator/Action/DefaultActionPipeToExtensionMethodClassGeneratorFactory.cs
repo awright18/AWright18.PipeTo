@@ -16,7 +16,7 @@ namespace AWright18.PipeTo.CodeGenerator
         public IStringGenerator Create()
         {
             var defaultValuePrefix = "value";
-            uint numberOfGenerics = 16;
+            uint numberOfGenerics = 17;
             return new ActionPipeToClassGenerator(
                 _namespaceName,
                 $"{_methodName}ActionExtensions",
