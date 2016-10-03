@@ -26,11 +26,15 @@ namespace AWright18.Extensions.Tests
         {
             var value1 = "value1";
             var value2 = "value2";
-            var expected = "value1,value2";
+            var value3 = "value3";
 
-            Func<string, string, string> func = (v1, v2) => string.Join(",", value1, value2);
+            var expected = "value1,value2,value3";
+            
+            string result = null;
 
-            var result = value1.PipeTo(func, value2);
+            Action<string, string, string> action = (v1, v2,v3) => result = string.Join(",", value1, value2,value3);
+
+            value1.PipeTo(action, value2,value3);
 
             Assert.Equal(expected, result);
         }
@@ -75,8 +79,7 @@ namespace AWright18.Extensions.Tests
         public void CanPipeToFuncWithValidValues(string firstValue, dynamic action,
             params string[] parameters)
         {
-            object result = null;
-
+          
             if (parameters != null && parameters.Any())
             {
                 var numberOfParamters = parameters.Length + 2;
