@@ -6,6 +6,7 @@ open Fake.GitVersionHelper
 open Fake.Testing.XUnit2
 open System;
 
+
 //Generator Project variables
 let generatorProjectName = "AWright18.PipeTo.CodeGenerator"
 let generatorProjectCsProj = sprintf "./source/%s/%s.csproj" generatorProjectName generatorProjectName
@@ -47,7 +48,7 @@ let mutable majorMinorVersion = ""
 
 //Targets 
 Target "Clean" (fun _ -> 
-    CleanDirs [generatorBuildDir;testBuildDir;buildDir]
+    CleanDirs [artifactsDir]
 )
 
 Target "NugetRestore" (fun _-> 
