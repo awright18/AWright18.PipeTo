@@ -108,7 +108,9 @@ Target "RunTests" (fun _->
     |> MSBuildRelease testBuildDir "build" 
     |> Log "TestProject-ReleaseBuild-Output: " 
 
-    let testProjectDllMessage = sprintf "Path to test project dll %s " testProjectDll
+    let testProjectDllExists = TestFile testProjectDll
+
+    let testProjectDllMessage = sprintf "Path to test project dll %s and exists %b" testProjectDll testProjectDllExists
 
     trace testProjectDllMessage
 
