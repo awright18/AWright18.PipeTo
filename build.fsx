@@ -47,7 +47,7 @@ let mutable majorMinorVersion = ""
 
 //Targets 
 Target "Clean" (fun _ -> 
-    CleanDirs []
+    CleanDirs [generatorBuildDir;testBuildDir;buildDir]
 )
 
 Target "NugetRestore" (fun _-> 
@@ -58,7 +58,7 @@ Target "BuildGenerator" (fun _->
 
     !! generatorProjectCsProj
     |> MSBuildRelease generatorBuildDir "build"
-    |> Log "GeneratorBuild-Output: " 
+    |> Log "Generator-ReleaseBuild-Output: " 
 )
 
 Target "RunGenerator" (fun _-> 
@@ -98,7 +98,7 @@ Target "BuildApp" (fun _ ->
 
     !! projectFileName
     |> MSBuildRelease buildDir "build" 
-    |> Log "ReleaseBuild-Output: " 
+    |> Log "App-ReleaseBuild-Output: " 
 )
 
 Target "RunTests" (fun _-> 
@@ -106,7 +106,7 @@ Target "RunTests" (fun _->
 
     !! testProjectCsProj
     |> MSBuildRelease testBuildDir "build" 
-    |> Log "ReleaseBuild-Output: " 
+    |> Log "TestProject-ReleaseBuild-Output: " 
 
     !! testProjectDll
     |> xUnit2 (fun p -> { p with 

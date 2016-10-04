@@ -7,7 +7,6 @@ namespace AWright18.PipeTo.CodeGenerator
     public class FuncParametersGenerator : IGenericStringGenerator
     {
         private readonly string _valuePrefix;
-        private readonly bool _skipFirst;
 
         public FuncParametersGenerator(string valuePrefix)
         {
