@@ -108,6 +108,10 @@ Target "RunTests" (fun _->
     |> MSBuildRelease testBuildDir "build" 
     |> Log "TestProject-ReleaseBuild-Output: " 
 
+    let testProjectDllMessage = sprintf "Path to test project dll %s " testProjectDll
+
+    trace testProjectDllMessage
+
     !! testProjectDll
     |> xUnit2 (fun p -> { p with 
                            ToolPath = xUnitExe
