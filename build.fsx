@@ -6,6 +6,7 @@ open Fake.GitVersionHelper
 open Fake.Testing.XUnit2
 open System;
 
+
 //Generator Project variables
 let generatorProjectName = "AWright18.PipeTo.CodeGenerator"
 let generatorProjectCsProj = sprintf "./source/%s/%s.csproj" generatorProjectName generatorProjectName
@@ -38,16 +39,16 @@ let projectFileName = sprintf "./source/%s/%s.csproj" projectName projectName
 let artifactsDir = "artifacts"
 let projectGuid = "E8C6B039-E310-41FE-9B83-1E163739CD9A"
 let copyright =  "2016"
+
 let mutable assemblyVersion = ""
 let mutable nugetVersion = ""
 let mutable informationalVersion = ""
-let mutable commitHash = ""
 let mutable majorMinorVersion = ""
 
 
 //Targets 
 Target "Clean" (fun _ -> 
-    CleanDirs []
+    CleanDirs [artifactsDir]
 )
 
 Target "NugetRestore" (fun _-> 
@@ -58,7 +59,7 @@ Target "BuildGenerator" (fun _->
 
     !! generatorProjectCsProj
     |> MSBuildRelease generatorBuildDir "build"
-    |> Log "GeneratorBuild-Output: " 
+    |> Log "Generator-ReleaseBuild-Output: " 
 )
 
 Target "RunGenerator" (fun _-> 
@@ -77,7 +78,6 @@ Target "SetVersions" (fun _->
     assemblyVersion <- result.AssemblySemVer
     nugetVersion <- result.NuGetVersion
     informationalVersion <- result.InformationalVersion
-    commitHash <- result.Sha
     majorMinorVersion <- result.MajorMinorPatch + ".0"
 )
 
@@ -93,12 +93,11 @@ Target "BuildApp" (fun _ ->
          Attribute.Copyright copyright
          Attribute.Version assemblyVersion
          Attribute.FileVersion majorMinorVersion
-         Attribute.InformationalVersion informationalVersion
-         Attribute.Metadata("githash", commitHash)]
+         Attribute.InformationalVersion informationalVersion]
 
     !! projectFileName
     |> MSBuildRelease buildDir "build" 
-    |> Log "ReleaseBuild-Output: " 
+    |> Log "App-ReleaseBuild-Output: " 
 )
 
 Target "RunTests" (fun _-> 
@@ -106,7 +105,13 @@ Target "RunTests" (fun _->
 
     !! testProjectCsProj
     |> MSBuildRelease testBuildDir "build" 
-    |> Log "ReleaseBuild-Output: " 
+    |> Log "TestProject-ReleaseBuild-Output: " 
+
+    let testProjectDllExists = TestFile testProjectDll
+
+    let testProjectDllMessage = sprintf "Path to test project dll %s and exists %b" testProjectDll testProjectDllExists
+
+    trace testProjectDllMessage
 
     !! testProjectDll
     |> xUnit2 (fun p -> { p with 
