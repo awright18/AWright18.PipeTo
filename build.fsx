@@ -39,10 +39,10 @@ let projectFileName = sprintf "./source/%s/%s.csproj" projectName projectName
 let artifactsDir = "artifacts"
 let projectGuid = "E8C6B039-E310-41FE-9B83-1E163739CD9A"
 let copyright =  "2016"
+
 let mutable assemblyVersion = ""
 let mutable nugetVersion = ""
 let mutable informationalVersion = ""
-let mutable commitHash = ""
 let mutable majorMinorVersion = ""
 
 
@@ -78,7 +78,6 @@ Target "SetVersions" (fun _->
     assemblyVersion <- result.AssemblySemVer
     nugetVersion <- result.NuGetVersion
     informationalVersion <- result.InformationalVersion
-    commitHash <- result.Sha
     majorMinorVersion <- result.MajorMinorPatch + ".0"
 )
 
@@ -94,8 +93,7 @@ Target "BuildApp" (fun _ ->
          Attribute.Copyright copyright
          Attribute.Version assemblyVersion
          Attribute.FileVersion majorMinorVersion
-         Attribute.InformationalVersion informationalVersion
-         Attribute.Metadata("githash", commitHash)]
+         Attribute.InformationalVersion informationalVersion]
 
     !! projectFileName
     |> MSBuildRelease buildDir "build" 

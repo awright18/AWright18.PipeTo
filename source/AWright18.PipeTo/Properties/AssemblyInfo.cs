@@ -9,11 +9,16 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCopyrightAttribute("2016")]
 [assembly: AssemblyVersionAttribute("0.1.0.0")]
 [assembly: AssemblyFileVersionAttribute("0.1.0.0")]
-[assembly: AssemblyInformationalVersionAttribute("0.1.0-issue-7.1+7.Branch.feature/issue-7.Sha.3be4e225ef4bcc1c6d432acb1bbb66ad3e392a58")]
-[assembly: AssemblyMetadataAttribute("githash","3be4e225ef4bcc1c6d432acb1bbb66ad3e392a58")]
+[assembly: AssemblyInformationalVersionAttribute("0.1.0-issue-7.1+10.Branch.feature/issue-7.Sha.833aa2550f9a7df3ede7d6151f1540a3e49b1525")]
 namespace System {
     internal static class AssemblyVersionInformation {
-        internal const string Version = "0.1.0.0";
-        internal const string InformationalVersion = "0.1.0-issue-7.1+7.Branch.feature/issue-7.Sha.3be4e225ef4bcc1c6d432acb1bbb66ad3e392a58";
+        internal const System.String AssemblyTitle = "AWright18.PipeTo";
+        internal const System.String AssemblyDescription = "Allows Piping of function results to other functions";
+        internal const System.String Guid = "E8C6B039-E310-41FE-9B83-1E163739CD9A";
+        internal const System.String AssemblyProduct = "AWright18.PipeTo";
+        internal const System.String AssemblyCopyright = "2016";
+        internal const System.String AssemblyVersion = "0.1.0.0";
+        internal const System.String AssemblyFileVersion = "0.1.0.0";
+        internal const System.String AssemblyInformationalVersion = "0.1.0-issue-7.1+10.Branch.feature/issue-7.Sha.833aa2550f9a7df3ede7d6151f1540a3e49b1525";
     }
 }
