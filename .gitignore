@@ -17,17 +17,14 @@
 [Rr]eleases/
 x64/
 x86/
-build/**/*
-!build/Nuget
 bld/
 [Bb]in/
 [Oo]bj/
 
-#Fake
-.fake
-
 # Visual Studio 2015 cache/options directory
 .vs/
+.fake/
+.git/
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
