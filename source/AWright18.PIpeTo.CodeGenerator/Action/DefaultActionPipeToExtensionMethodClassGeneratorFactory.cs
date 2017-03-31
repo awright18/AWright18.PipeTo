@@ -1,4 +1,4 @@
-﻿using AWright18.PipeTo.CodeGenerator.Action;
+using AWright18.PipeTo.CodeGenerator.Action;
 
 namespace AWright18.PipeTo.CodeGenerator
 {

@@ -10,6 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyVersionAttribute("0.1.0.0")]
 [assembly: AssemblyFileVersionAttribute("0.1.0.0")]
 [assembly: AssemblyInformationalVersionAttribute("0.1.0-unstable.17+Branch.develop.Sha.335ee8954ca2357bd6081fffc315c7a5638722e4")]
+[assembly: AssemblyMetadataAttribute("githash","335ee8954ca2357bd6081fffc315c7a5638722e4")]
 namespace System {
     internal static class AssemblyVersionInformation {
         internal const System.String AssemblyTitle = "AWright18.PipeTo";
@@ -20,5 +21,6 @@ namespace System {
         internal const System.String AssemblyVersion = "0.1.0.0";
         internal const System.String AssemblyFileVersion = "0.1.0.0";
         internal const System.String AssemblyInformationalVersion = "0.1.0-unstable.17+Branch.develop.Sha.335ee8954ca2357bd6081fffc315c7a5638722e4";
+        internal const System.String AssemblyMetadata_githash = "335ee8954ca2357bd6081fffc315c7a5638722e4";
     }
 }

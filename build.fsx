@@ -1,4 +1,6 @@
-#r "Build/Fake/tools/FakeLib.dll" // include Fake lib
+//include FAKE
+#r "packages/Fake/tools/FakeLib.dll"
+
 open Fake 
 open Fake.AssemblyInfoFile
 open Fake.Git
@@ -20,7 +22,7 @@ let testProjectCsProj = sprintf "./tests/%s/%s.csproj" testProjectName testProje
 let testProjectDll = sprintf "artifacts/%s/%s.dll" testProjectName testProjectName
 let testBuildDir = sprintf "artifacts/%s" testProjectName
 let xUnitExeName = "xunit.console"
-let xUnitExe =  sprintf "build/%s/%s.exe" "xunit.runner.console/tools" xUnitExeName
+let xUnitExe =  "./packages/xunit.runner.console/tools/xunit.console.exe"
 let xUnitExeArgs = testProjectDll
 let xUnitHtmlOutput = sprintf "artifacts/%s/%s.html" testProjectName testProjectName
 
@@ -73,7 +75,7 @@ Target "RunGenerator" (fun _->
 
 Target "SetVersions" (fun _-> 
     
-    let result = GitVersion (fun p -> { p with ToolPath = @"Build\GitVersion.CommandLine\tools\GitVersion.exe" })
+    let result = GitVersion (fun p -> { p with ToolPath = @"packages\GitVersion.CommandLine\tools\GitVersion.exe" })
 
     assemblyVersion <- result.AssemblySemVer
     nugetVersion <- result.NuGetVersion
