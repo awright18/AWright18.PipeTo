@@ -8,5 +8,5 @@ if errorlevel 1 (
   exit /b %errorlevel%
 )
 
-"packages\FAKE\tools\Fake.exe" build.fsx target="CreatePackage"
+"packages\FAKE\tools\Fake.exe" build.fsx target="CreatePackage" apikey=%apikey% packageUrl=%packageUrl%
 pause
