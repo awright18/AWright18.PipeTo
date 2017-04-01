@@ -40,13 +40,18 @@ let nuspec = sprintf "%s.nuspec" projectName
 let projectFileName = sprintf "./source/%s/%s.csproj" projectName projectName
 let artifactsDir = "artifacts"
 let projectGuid = "E8C6B039-E310-41FE-9B83-1E163739CD9A"
-let copyright =  "2016"
+let copyright = DateTime.Now.Year.ToString()
 
+//publish parameters
+let nugetApiKey = getBuildParamOrDefault "apikey" ""
+let publishUrl = getBuildParamOrDefault "packageUrl" ""
+let publish = nugetApiKey <> "" && publishUrl <> ""
+
+//version info
 let mutable assemblyVersion = ""
 let mutable nugetVersion = ""
 let mutable informationalVersion = ""
 let mutable majorMinorVersion = ""
-
 
 //Targets 
 Target "Clean" (fun _ -> 
@@ -136,6 +141,9 @@ Target "CreatePackage" (fun _ ->
               Copyright = copyright
               OutputPath = nugetOutputDir
               WorkingDir = "."
+              PublishUrl = publishUrl
+              AccessKey = nugetApiKey
+              Publish = publish
          }) 
          "AWright18.PipeTo.nuspec"
 )
