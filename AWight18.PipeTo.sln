@@ -1,18 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.10
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWright18.PipeTo", "source\AWright18.PipeTo.csproj", "{860C6BB2-4708-461F-9052-33862020A907}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWright18.PipeTo", "source\AWright18.PipeTo\AWright18.PipeTo.csproj", "{860C6BB2-4708-461F-9052-33862020A907}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{2B893FFB-CC19-4180-AF8D-44C94DDB3ED0}"
 	ProjectSection(SolutionItems) = preProject
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
-		build.bat = build.bat
+		AWright18.PipeTo.nuspec = AWright18.PipeTo.nuspec
 		build.fsx = build.fsx
-		CreatePackage.bat = CreatePackage.bat
+		ci_build.bat = ci_build.bat
+		dev_build.bat = dev_build.bat
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWright18.PIpeTo.CodeGenerator", "source\AWright18.PIpeTo.CodeGenerator\AWright18.PIpeTo.CodeGenerator.csproj", "{5B8B3020-D7D4-454B-8617-9271F564B871}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{FA3ECBF6-C63F-4F5C-9621-50EF2EEEEE2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWright18.PipeTo.Tests", "Tests\AWright18.PipeTo.Tests\AWright18.PipeTo.Tests.csproj", "{91C81F57-45A7-457C-93B9-57297209EA1E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,8 +31,19 @@ Global
 		{860C6BB2-4708-461F-9052-33862020A907}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{860C6BB2-4708-461F-9052-33862020A907}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{860C6BB2-4708-461F-9052-33862020A907}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B8B3020-D7D4-454B-8617-9271F564B871}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B8B3020-D7D4-454B-8617-9271F564B871}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B8B3020-D7D4-454B-8617-9271F564B871}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B8B3020-D7D4-454B-8617-9271F564B871}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91C81F57-45A7-457C-93B9-57297209EA1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91C81F57-45A7-457C-93B9-57297209EA1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91C81F57-45A7-457C-93B9-57297209EA1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91C81F57-45A7-457C-93B9-57297209EA1E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{91C81F57-45A7-457C-93B9-57297209EA1E} = {FA3ECBF6-C63F-4F5C-9621-50EF2EEEEE2C}
 	EndGlobalSection
 EndGlobal
