@@ -151,4 +151,4 @@ Target "CreatePackage" (fun _ ->
     ==> "CreatePackage"
     
 
-RunTargetOrDefault "RunTests"
+RunTargetOrDefault "CreatePackage"

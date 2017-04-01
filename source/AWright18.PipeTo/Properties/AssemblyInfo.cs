@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCopyrightAttribute("2016")]
 [assembly: AssemblyVersionAttribute("0.1.0.0")]
 [assembly: AssemblyFileVersionAttribute("0.1.0.0")]
-[assembly: AssemblyInformationalVersionAttribute("0.1.0-unstable.17+Branch.develop.Sha.335ee8954ca2357bd6081fffc315c7a5638722e4")]
+[assembly: AssemblyInformationalVersionAttribute("0.1.0-unstable.18+Branch.develop.Sha.80e7ef49d170e7b309e9e90de157f602901816e0")]
 namespace System {
     internal static class AssemblyVersionInformation {
         internal const System.String AssemblyTitle = "AWright18.PipeTo";
@@ -19,6 +19,6 @@ namespace System {
         internal const System.String AssemblyCopyright = "2016";
         internal const System.String AssemblyVersion = "0.1.0.0";
         internal const System.String AssemblyFileVersion = "0.1.0.0";
-        internal const System.String AssemblyInformationalVersion = "0.1.0-unstable.17+Branch.develop.Sha.335ee8954ca2357bd6081fffc315c7a5638722e4";
+        internal const System.String AssemblyInformationalVersion = "0.1.0-unstable.18+Branch.develop.Sha.80e7ef49d170e7b309e9e90de157f602901816e0";
     }
 }
