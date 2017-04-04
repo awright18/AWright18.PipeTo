@@ -6,19 +6,19 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescriptionAttribute("Allows Piping of function results to other functions")]
 [assembly: GuidAttribute("E8C6B039-E310-41FE-9B83-1E163739CD9A")]
 [assembly: AssemblyProductAttribute("AWright18.PipeTo")]
-[assembly: AssemblyCopyrightAttribute("2016")]
-[assembly: AssemblyVersionAttribute("0.1.0.0")]
-[assembly: AssemblyFileVersionAttribute("0.1.0.0")]
-[assembly: AssemblyInformationalVersionAttribute("0.1.0-unstable.18+Branch.develop.Sha.80e7ef49d170e7b309e9e90de157f602901816e0")]
+[assembly: AssemblyCopyrightAttribute("2017")]
+[assembly: AssemblyVersionAttribute("1.2.0.0")]
+[assembly: AssemblyFileVersionAttribute("1.2.0.0")]
+[assembly: AssemblyInformationalVersionAttribute("1.2.0-Add-Readme-md.1+1.Branch.feature/Add_Readme.md.Sha.bf9df1cbf4b58ebc799ce16ccc0af56cd28ead20")]
 namespace System {
     internal static class AssemblyVersionInformation {
         internal const System.String AssemblyTitle = "AWright18.PipeTo";
         internal const System.String AssemblyDescription = "Allows Piping of function results to other functions";
         internal const System.String Guid = "E8C6B039-E310-41FE-9B83-1E163739CD9A";
         internal const System.String AssemblyProduct = "AWright18.PipeTo";
-        internal const System.String AssemblyCopyright = "2016";
-        internal const System.String AssemblyVersion = "0.1.0.0";
-        internal const System.String AssemblyFileVersion = "0.1.0.0";
-        internal const System.String AssemblyInformationalVersion = "0.1.0-unstable.18+Branch.develop.Sha.80e7ef49d170e7b309e9e90de157f602901816e0";
+        internal const System.String AssemblyCopyright = "2017";
+        internal const System.String AssemblyVersion = "1.2.0.0";
+        internal const System.String AssemblyFileVersion = "1.2.0.0";
+        internal const System.String AssemblyInformationalVersion = "1.2.0-Add-Readme-md.1+1.Branch.feature/Add_Readme.md.Sha.bf9df1cbf4b58ebc799ce16ccc0af56cd28ead20";
     }
 }

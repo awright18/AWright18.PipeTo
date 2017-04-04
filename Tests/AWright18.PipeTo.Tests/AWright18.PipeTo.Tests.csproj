@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AWright18.PipeTo">
-      <HintPath>..\..\artifacts\AWright18.PipeTo\AWright18.PipeTo.dll</HintPath>
+      <HintPath>..\..\source\AWright18.PipeTo\obj\Release\AWright18.PipeTo.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
