@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
 
-namespace AWright18.Extensions.Tests
+namespace AWright18.PipeTo.Tests
 {
     public class FuncPipeToTestData : IEnumerable<object[]>
     {

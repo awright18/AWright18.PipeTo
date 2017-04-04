@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace AWright18.PIpeTo.CodeGenerator
+namespace AWright18.PipeTo.CodeGenerator
 {
     public class CSharpClassFileWriter
     {

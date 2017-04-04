@@ -1,5 +1,3 @@
-using AWright18.PipeTo.CodeGenerator.Action;
-
 namespace AWright18.PipeTo.CodeGenerator.Func
 {
     public class DefaultFuncPipeToExtensionMethodClassGeneratorFactory : IExtensionMethodClassGeneratorFactory

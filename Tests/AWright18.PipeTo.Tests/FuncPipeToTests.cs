@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using AWright18.PipeTo;
 using Xunit;
 
-namespace AWright18.Extensions.Tests
+namespace AWright18.PipeTo.Tests
 {
     public class FuncPipeToTests
     {

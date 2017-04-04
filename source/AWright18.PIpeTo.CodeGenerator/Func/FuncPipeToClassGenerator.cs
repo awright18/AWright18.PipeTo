@@ -1,5 +1,4 @@
 ﻿using System;
-using AWright18.PIpeTo.CodeGenerator;
 
 namespace AWright18.PipeTo.CodeGenerator.Func
 {

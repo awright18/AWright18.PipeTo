@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
+using AWright18.PipeTo.CodeGenerator.Action;
 using AWright18.PipeTo.CodeGenerator.Func;
-using AWright18.PIpeTo.CodeGenerator;
 
 namespace AWright18.PipeTo.CodeGenerator
 {
@@ -18,7 +18,7 @@ namespace AWright18.PipeTo.CodeGenerator
             if (!File.Exists(csProjFile))
                 throw new FileNotFoundException("csprojFile was not found", csProjFile);
 
-            var namespaceName = "AWright18.Extensions";
+            var namespaceName = "AWright18.PipeTo";
 
             var methodName = "PipeTo";
 

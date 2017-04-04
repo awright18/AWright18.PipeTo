@@ -2,7 +2,7 @@
 using System.IO;
 using FubuCsProjFile;
 
-namespace AWright18.PIpeTo.CodeGenerator
+namespace AWright18.PipeTo.CodeGenerator
 {
     public class CsProjFileFileAdder
     {

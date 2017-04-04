@@ -7,7 +7,7 @@
     <ProjectGuid>{91C81F57-45A7-457C-93B9-57297209EA1E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AWright18.Extensions.Tests</RootNamespace>
+    <RootNamespace>AWright18.PipeTo.Tests</RootNamespace>
     <AssemblyName>AWright18.PipeTo.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

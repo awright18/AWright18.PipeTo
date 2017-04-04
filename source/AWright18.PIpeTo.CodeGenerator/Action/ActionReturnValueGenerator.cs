@@ -1,4 +1,4 @@
-﻿namespace AWright18.PipeTo.CodeGenerator
+﻿namespace AWright18.PipeTo.CodeGenerator.Action
 {
     public class VoidActionReturnValueGenerator : IStringGenerator
     {
