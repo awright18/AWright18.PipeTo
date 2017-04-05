@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.10
+VisualStudioVersion = 15.0.26228.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWright18.PipeTo", "source\AWright18.PipeTo\AWright18.PipeTo.csproj", "{860C6BB2-4708-461F-9052-33862020A907}"
 EndProject
@@ -20,6 +20,14 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{FA3ECBF6-C63F-4F5C-9621-50EF2EEEEE2C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWright18.PipeTo.Tests", "Tests\AWright18.PipeTo.Tests\AWright18.PipeTo.Tests.csproj", "{91C81F57-45A7-457C-93B9-57297209EA1E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{5801C148-992A-499F-9797-7CCB5E7A2339}"
+	ProjectSection(SolutionItems) = preProject
+		docs\build.md = docs\build.md
+		docs\examples.md = docs\examples.md
+		index.md = index.md
+		docs\installation.md = docs\installation.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
