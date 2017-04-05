@@ -5,8 +5,8 @@
     <version>@build.number@</version>
     <authors>@authors@</authors>
     <owners>@authors@</owners>
-    <projectUrl>https://github.com/awright18/AWright18.PipeTo</projectUrl>
-    <licenseUrl>https://raw.githubusercontent.com/awright18/AWright18.PipeTo/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://awright18.github.io/AWright18.PipeTo</projectUrl>
+    <licenseUrl>https://raw.githubusercontent.com/awright18/AWright18.PipeTo/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>@description@</description>
     <releaseNotes>v2.0.0 *Changed Extensions namespace to PipeTo</releaseNotes>
