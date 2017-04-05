@@ -7,8 +7,8 @@
     <ProjectGuid>{5B8B3020-D7D4-454B-8617-9271F564B871}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AWright18.PIpeTo.CodeGenerator</RootNamespace>
-    <AssemblyName>AWright18.PIpeTo.CodeGenerator</AssemblyName>
+    <RootNamespace>AWright18.PipeTo.CodeGenerator</RootNamespace>
+    <AssemblyName>AWright18.PipeTo.CodeGenerator</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

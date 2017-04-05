@@ -1,4 +1,4 @@
-﻿namespace AWright18.PIpeTo.CodeGenerator
+﻿namespace AWright18.PipeTo.CodeGenerator
 {
     public interface IHaveAGeneratedClassName
     {

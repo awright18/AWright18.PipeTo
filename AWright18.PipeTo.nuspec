@@ -5,16 +5,18 @@
     <version>@build.number@</version>
     <authors>@authors@</authors>
     <owners>@authors@</owners>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://github.com/awright18/AWright18.PipeTo</projectUrl>
+    <licenseUrl>https://raw.githubusercontent.com/awright18/AWright18.PipeTo/master/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>@description@</description>
-    <releaseNotes>@releaseNotes@</releaseNotes>
+    <releaseNotes>v2.0.0 *Changed Extensions namespace to PipeTo</releaseNotes>
     <copyright>@copyright@</copyright>
     <tags>@tags@</tags>
     <dependencies>
     </dependencies>
   </metadata>
   <files>
-    <file src="artifacts/AWright18.PipeTo/AWright18.PipeTo.dll"  target="lib\net451\"/>
-    <file src="artifacts/AWright18.PipeTo/AWright18.PipeTo.pdb"   target="lib\net451\" />
+    <file src="artifacts/AWright18.PipeTo/AWright18.PipeTo.dll" target="lib\net451"/>
+    <file src="artifacts/AWright18.PipeTo/AWright18.PipeTo.pdb" target="lib\net451" />
   </files>
 </package>

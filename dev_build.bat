@@ -1,5 +1,12 @@
 @echo off
 cls
-"build\FAKE\tools\Fake.exe" build.fsx target="RunTests"
 
+.paket\paket.bootstrapper.exe
+
+.paket\paket.exe restore
+if errorlevel 1 (
+  exit /b %errorlevel%
+)
+
+"packages\FAKE\tools\Fake.exe" build.fsx target="CreatePackage" apikey=%apikey% packageUrl=%packageUrl%
 pause

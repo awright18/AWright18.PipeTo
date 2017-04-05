@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace AWright18.Extensions.Tests
+namespace AWright18.PipeTo.Tests
 {
     public class ActionPipeToTestData : IEnumerable<object[]>
     {

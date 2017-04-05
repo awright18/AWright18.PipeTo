@@ -1,6 +1,4 @@
-using AWright18.PipeTo.CodeGenerator.Action;
-
-namespace AWright18.PipeTo.CodeGenerator
+namespace AWright18.PipeTo.CodeGenerator.Action
 {
     public class DefaultActionPipeToExtensionMethodClassGeneratorFactory : IExtensionMethodClassGeneratorFactory
     {

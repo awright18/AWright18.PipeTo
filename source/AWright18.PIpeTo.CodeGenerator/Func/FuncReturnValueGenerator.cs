@@ -1,6 +1,4 @@
-﻿using AWright18.PIpeTo.CodeGenerator;
-
-namespace AWright18.PipeTo.CodeGenerator
+﻿namespace AWright18.PipeTo.CodeGenerator.Func
 {
     public class FuncReturnValueGenerator : IGenericStringGenerator
     {

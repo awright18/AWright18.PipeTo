@@ -1,7 +1,7 @@
 
             
 using System;
-namespace AWright18.Extensions
+namespace AWright18.PipeTo
 {
     public static class PipeToFuncExtensions
     {                  
