@@ -29,6 +29,6 @@ Here is a simple example of something you might do with PipeTo.
 
 ## [How to use it](examples.md)
 
-## [How to install it](Installation.md)
+## [How to install it](install.md)
 
 ## [How to build it](build.md)

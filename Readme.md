@@ -27,11 +27,11 @@ Here is a simple example of something you might do with PipeTo.
 
 ```
 
-## [How to use it](docs\examples.md)
+## [How to use it](https://awright18.github.io/AWright18.PipeTo/examples.html)
 
-## [How to install it](docs\Installation.md)
+## [How to install it](https://awright18.github.io/AWright18.PipeTo/install.html)
 
-## [How to build it](docs\build.md)
+## [How to build it](https://awright18.github.io/AWright18.PipeTo/build.html)
 
 
 
